@@ -1,0 +1,129 @@
+/*====== GOOGLE FONTS ======*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+/*====== VARIABLES ======*/
+:root {
+    --mobile: 375px;
+    --desktop: 1440px;
+
+    /* Primary */
+    --blue: hsl(223, 87%, 63%);
+
+    /* Secondary */
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+
+    /* Neutral */
+    --gray: hsl(0, 0%, 59%);
+    --verydark-blue: hsl(209, 33%, 12%);
+}
+
+/*====== BASE ======*/
+body {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+/*====== MAIN CLASSES ======*/
+.container {
+    padding-block: 5rem;
+    width: var(--mobile);
+    padding-inline: 0;
+}
+
+.main-text {
+    color: var(--gray);
+}
+
+.highlight, .sub-text {
+    color: var(--verydark-blue);
+}
+
+.email {
+    padding-block: 10px;
+    padding-left: 2rem;
+    border-radius: 10rem;
+    margin-bottom: 5px;
+    border: 1px solid var(--pale-blue);
+    outline: none;
+}
+
+.email::placeholder {
+    color: var(--pale-blue);
+}
+
+.button {
+    padding-block: 10px;
+    border-radius: 10rem;
+    background-color: var(--blue);
+    border: none;
+    color: white;
+    box-shadow: 0 10px 15px hsla(223, 87%, 63%, 0.336);
+    transition: .3s;
+}
+
+.button:hover {
+    background-color: hsla(223, 87%, 63%, 0.822);
+}
+
+.social-icon i {
+    font-size: 20px;
+    color: var(--blue);
+    border: 1px solid hsla(223, 100%, 88%, 0.493);
+    padding-inline: .5rem;
+    padding-block: .2rem;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.social-icon i:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+.copy-right {
+    font-size: 13px;
+    color: var(--gray);
+}
+
+.error-msg {
+    font-size: 12px;
+    color: var(--light-red);
+    font-style: italic;
+}
+
+.footer {
+    height: 50px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding-block: 4rem;
+        width: 768px;
+    }
+
+    .email {
+        width: 400px;
+        margin-bottom: 0;
+        margin-right: 1rem;
+    }
+
+    .button {
+        width: 200px;
+    }
+
+    .hero-img {
+        width: 600px;
+    }
+
+    .error-msg {
+        position: absolute;
+        left: 6rem;
+        top: 3rem;
+    }
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
